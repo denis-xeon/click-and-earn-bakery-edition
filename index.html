@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	 -->
+	 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="shortcut icon" href="assets/img/dollar.svg" type="image/x-icon">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>CLICK&EARN</title>
+</head>
+<body class=" noselect">
+		<header class="header"> 
+			<div class="container">
+				<div class="header-content">
+					<div class="header__logo">
+						<h1>CLICK&EARN</h1>
+						<h2>BAKERY EDITION</h2>
+					</div>
+					<div class="header__content">
+						<div class="header__content-counters">
+							<div class="header__content-counter header-total-amount">
+								<img style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;" src="assets/img/dollar.svg" alt="coin-img" class="header-total-amount-img">
+								<span id="total-amount">0</span>
+							</div>
+							<div class="header__content-counter header-persecond-amount">
+								<p><span id="persecond-amount">0</span>$/sec</p>
+							</div>
+						</div>
+						<div class="header__content-buttons">
+							<div id="homepage-button" class="header__content-button header__content-buttons__homepage-btn">HOME</div>
+							
+							<div id="factorypage-button" class="header__content-button header__content-buttons__factorypage-btn">FACTORY</div>	
+							<div id="sellpage-button" class="header__content-button header__content-buttons__sellpage-btn">SELL</div>
+	
+						</div>
+						<div id="setting-button" class="header__setting-button">
+							<img class="header__setting-img" src="assets/img/setting.svg" alt="setting-button">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</header>
+		<main>
+			<section class="main-section">
+				<div class="container">
+					<div class="main-section__content">
+						<div class="main-section__items-counters">
+							<div id="cookie-count" class="item-count cookie-counter">
+								<p class="item-name">COOKIE</p>
+								<div class="item-count-content">
+									<img src="assets/img/cookie.svg" alt="icon" class="item-icon">
+									<span id="cookie-amount">0</span>
+								</div>
+							</div>
+							<div id="muffin-count" class="item-count muffin-counter">
+								<p class="item-name">MUFFIN</p>
+								<div class="item-count-content">
+									<img src="assets/img/muffin.svg" alt="icon" class="item-icon">
+									<span id="muffin-amount">0</span>
+								</div>
+							</div>
+							<div id="croissant-count" class="item-count croissant-counter">
+								<p class="item-name">CROISSANT</p>
+								<div class="item-count-content">
+									<img src="assets/img/croissant.svg" alt="icon" class="item-icon">
+									<span id="croissant-amount">0</span>
+								</div>
+							</div>
+							<div id="donut-count" class="item-count donut-counter">
+								<p class="item-name">DONUT</p>
+								<div class="item-count-content">
+									<img src="assets/img/donut.svg" alt="icon" class="item-icon">
+									<span id="donut-amount">0</span>
+								</div>
+							</div>
+							<div id="cake-slice-count" class="item-count cake-slice-counter">
+								<p class="item-name">CAKE SLICE</p>
+								<div class="item-count-content">
+									<img src="assets/img/cake-slice.svg" alt="icon" class="item-icon">
+									<span id="cake-slice-amount">0</span>
+								</div>
+							</div>
+							<div id="cake-count" class="item-count cake-counter">
+								<p class="item-name">CAKE</p>
+								<div class="item-count-content">
+									<img src="assets/img/cake.svg" alt="icon" class="item-icon">
+									<span id="cake-amount">0</span>
+								</div>
+							</div>
+							
+						</div>
+						<div id="home-page" class="screen-home">
+							<div class="center-button-wrapper">
+								<div id="click-button" class="main-section__center-button noselect">
+									<img class="center-button-coin-img" src="assets/img/dollar.svg" alt="coin">
+									<p><span id="amout-by-click">1</span>$/click</p>
+								</div>
+							</div>
+
+						<div class="main-section__upgrades">
+							<h3>UPGRADES</h3>
+							<div class="upgrades-items">
+								<div id="upgrade-auto-click" class="upgrades-item auto-click-button">
+									<img class="upgrades-item-img" src="assets/img/pay-per-click.svg" alt="pay-per-click">
+									<div class="upgrades-item-text">
+										<h4>AUTO CLICK</h4>
+										<p><span id="auto-click-price">150</span>$</p>
+									</div>
+									<div id="auto-click-button-banner" class="upgrades-item-banner auto-click-button-banner"></div>
+								</div>
+								<div id="upgrade-improve-click" class="upgrades-item improve-click-button">
+									<img class="upgrades-item-img" src="assets/img/lvl-up.svg" alt="lvl-up">
+									<div class="upgrades-item-text">
+										<h4>IMPROVE CLICK</h4>
+										<p><span id="improve-click-price">150</span>$</p>
+									</div>
+									<div class="upgrades-item-banner improve-click-button-banner"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="factory-page" class="screen-factory">
+						<div class="factory-item">
+							<h2>COOKIE</h2>
+							<div class="factory-item-wrapper">
+								<img draggable="false" src="assets/img/cookieShop.svg" alt="img-shop">
+							</div>
+							<div id="cookieshop-imprbtn" class="factory-item-improve-button">
+								<p>LVL+</p>
+								<p class="factory-item-price"><span id="cookieshop-imprprice">20</span>$</p>
+							</div>
+							<div class="factory-item-info">
+								<div class="factory-item-lvl">LVL <span id="cookieshop-lvl">1</span></div>
+								<div class="factory-item-get"><span id="cookieshop-itempcs">1</span>pcs/<span id="cookieshop-itemtime">10</span>s</div>
+							</div>
+						</div>
+						<div class="factory-item">
+							<h2>MUFFIN</h2>
+							<div class="factory-item-wrapper">
+								<img src="assets/img/muffinShop.svg" alt="img-shop">
+							</div>
+							<div id="muffinshop-imprbtn" class="factory-item-improve-button">
+								<p>LVL+</p>
+								<p class="factory-item-price"><span id="muffinshop-imprprice">20</span>$</p>
+							</div>
+							<div class="factory-item-info">
+								<div class="factory-item-lvl">LVL <span id="muffinshop-lvl">1</span></div>
+								<div class="factory-item-get"><span id="muffinshop-itempcs">1</span>pcs/<span id="muffinshop-itemtime">10</span>s</div>
+							</div>
+						</div>
+						<div class="factory-item">
+							<h2>CROISSANT</h2>
+							<div class="factory-item-wrapper">
+								<img src="assets/img/croissantShop.svg" alt="img-shop">
+							</div>
+							<div id="croissantshop-imprbtn" class="factory-item-improve-button">
+								<p>LVL+</p>
+								<p class="factory-item-price"><span id="croissantshop-imprprice">20</span>$</p>
+							</div>
+							<div class="factory-item-info">
+								<div class="factory-item-lvl">LVL <span id="croissantshop-lvl">1</span></div>
+								<div class="factory-item-get"><span id="croissantshop-itempcs">1</span>pcs/<span id="croissantshop-itemtime">10</span>s</div>
+							</div>
+						</div>
+						<div class="factory-item">
+							<h2>DONUT</h2>
+							<div class="factory-item-wrapper">
+								<img src="assets/img/donutShop.svg" alt="img-shop">
+							</div>
+							<div id="donutshop-imprbtn" class="factory-item-improve-button">
+								<p>LVL+</p>
+								<p class="factory-item-price"><span id="donutshop-imprprice">20</span>$</p>
+							</div>
+							<div class="factory-item-info">
+								<div class="factory-item-lvl">LVL <span id="donutshop-lvl">1</span></div>
+								<div class="factory-item-get"><span id="donutshop-itempcs">1</span>pcs/<span id="donutshop-itemtime">10</span>s</div>
+							</div>
+						</div>
+						<div class="factory-item">
+							<h2>CAKE SLICE</h2>
+							<div class="factory-item-wrapper">
+								<img src="assets/img/smalCakesShop.svg" alt="img-shop">
+							</div>
+							<div id="cakesliceshop-imprbtn" class="factory-item-improve-button">
+								<p>LVL+</p>
+								<p class="factory-item-price"><span id="cakesliceshop-imprprice">20</span>$</p>
+							</div>
+							<div class="factory-item-info">
+								<div class="factory-item-lvl">LVL <span id="cakesliceshop-lvl">1</span></div>
+								<div class="factory-item-get"><span id="cakesliceshop-itempcs">1</span>pcs/<span id="cakesliceshop-itemtime">10</span>s</div>
+							</div>
+						</div>
+						<div class="factory-item">
+							<h2>CAKE</h2>
+							<div class="factory-item-wrapper">
+								<img src="assets/img/cakeShop.svg" alt="img-shop">
+							</div>
+							<div id="cakeshop-imprbtn" class="factory-item-improve-button">
+								<p>LVL+</p>
+								<p class="factory-item-price"><span id="cakeshop-imprprice">20</span>$</p>
+							</div>
+							<div class="factory-item-info">
+								<div class="factory-item-lvl">LVL <span id="cakeshop-lvl">1</span></div>
+								<div class="factory-item-get"><span id="cakeshop-itempcs">1</span>pcs/<span id="cakeshop-itemtime">10</span>s</div>
+							</div>
+						</div>
+					</div>
+					<div id="sell-page" class="screen-sell"></div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<audio id="home-suka" src="assets/audio/Запись (3).m4a" preload="auto"></audio>
+	<audio id="click-audio" src="assets/audio/Запись (5).m4a" preload="auto"></audio>
+	<script src="assets/js/main.js"></script>
+	
+	
+</body>
+</html>
