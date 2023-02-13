@@ -65,5 +65,4 @@ upgradeBtnClick.addEventListener('click', function(){
 })
 
 mainBtnClick.onclick = function (){btnClick()}
-// setInterval(() => {btnClick();}, 5000);
-
+setInterval(() => {btnClick();}, 5000);
