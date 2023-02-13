@@ -8,6 +8,8 @@ const mainBtnClick = document.getElementById('click-button');
 const upgradeBtnClick = document.getElementById('upgrade-auto-click');
 const bodyListen = document.getElementById('body');
 
+const autoClickLevels = [0, 1, 2, 5, 10, 20, 50, 100];
+
 let timesClicked = 0;
 let autoClickLevel = 0;
 
@@ -43,7 +45,7 @@ function factoryChecker() {
 }
 
 function autoClick() {
-    timesClicked += autoClickLevel;
+    timesClicked += autoClickLevels[autoClickLevel];
     upgradeChecker();
     document.getElementById('total-amount').innerHTML = timesClicked;
 }
@@ -69,11 +71,11 @@ mainBtnClick.addEventListener('click', function () {
 })
 
 upgradeBtnClick.addEventListener('click', function () {
-    if (timesClicked >= 150) {
+    if (timesClicked >= 150 && autoClickLevel < (autoClickLevels.length - 1)) {
         timesClicked -= 150;
         autoClickLevel++;
     }
-    document.getElementById('persecond-amount').innerHTML = autoClickLevel;
+    document.getElementById('persecond-amount').innerHTML = autoClickLevels[autoClickLevel];
     document.getElementById('total-amount').innerHTML = timesClicked;
     if (timesClicked < 150) {
         document.getElementById('auto-click-button-banner').style.display = "block";
@@ -86,6 +88,7 @@ if (autoClickLevel >= 0) {
     setInterval(() => { autoClick(); }, 1000);
 }
 
+console.log(autoClickLevels.length);
 
 mainBtnClick.onclick = function () { btnClick() };
 bodyListen.onmouseover = function () { factoryChecker() };
