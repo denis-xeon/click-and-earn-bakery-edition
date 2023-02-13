@@ -30,7 +30,7 @@ mainBtnClick.addEventListener('click', function(){
 })
 
 let timesClicked = 0;
-
+//
 function btnClick() {
     if (timesClicked < 9999){
 		timesClicked ++;
