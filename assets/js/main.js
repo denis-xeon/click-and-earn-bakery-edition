@@ -7,6 +7,7 @@ const factoryPage = document.getElementById('factory-page');
 const sellPage = document.getElementById('sell-page');
 
 const mainBtnClick = document.getElementById('click-button');
+const upgradeBtnClick = document.getElementById('upgrade-auto-click');
 
 factoryPageBtn.addEventListener('click', function(){
  homePage.style.display = "none";
@@ -31,22 +32,42 @@ mainBtnClick.addEventListener('click', function(){
 let timesClicked = 0;
 
 function btnClick() {
-  if (timesClicked < 9999){
+    if (timesClicked < 9999){
 		timesClicked ++;
-	} else{
+    } else{
 		window.location.reload()
 	}
     if(timesClicked >= 150){
         document.getElementById('auto-click-button-banner').style.display = "none";
         document.getElementById('upgrade-auto-click').classList.add('upgrade-active');
     }
+    if(timesClicked >= 100){
+        document.getElementById('cookie-factory-banner').style.display = "none"
+    } else{
+        document.getElementById('cookie-factory-banner').style.display = "flex"
+    }
   document.getElementById('total-amount').innerHTML = timesClicked;	
   return true 
 }
 
-function autoClickBtn(){
+// function autoClickBtn(){
+//     console.log("fgdgd")
+//     if(timesClicked >= 150){       
+//          timesClicked -= 150;
+//     }
     
+// }
+
+upgradeBtnClick.addEventListener('click', function(){
+    if(timesClicked >= 150){       
+        timesClicked -= 150;
+   }
+   document.getElementById('total-amount').innerHTML = timesClicked;
+   if(timesClicked < 150){
+    document.getElementById('auto-click-button-banner').style.display = "block";
+    document.getElementById('upgrade-auto-click').classList.remove('upgrade-active');
 }
+})
 
 mainBtnClick.onclick = function (){btnClick()}
 // setInterval(() => {btnClick();}, 5000);
