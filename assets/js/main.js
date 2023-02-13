@@ -30,7 +30,7 @@ mainBtnClick.addEventListener('click', function(){
 })
 
 let timesClicked = 0;
-
+//
 function btnClick() {
     if (timesClicked < 9999){
 		timesClicked ++;
@@ -40,6 +40,11 @@ function btnClick() {
     if(timesClicked >= 150){
         document.getElementById('auto-click-button-banner').style.display = "none";
         document.getElementById('upgrade-auto-click').classList.add('upgrade-active');
+    }
+    if(timesClicked >= 100){
+        document.getElementById('cookie-factory-banner').style.display = "none"
+    } else{
+        document.getElementById('cookie-factory-banner').style.display = "flex"
     }
   document.getElementById('total-amount').innerHTML = timesClicked;	
   return true 
