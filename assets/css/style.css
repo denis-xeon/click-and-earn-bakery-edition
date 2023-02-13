@@ -10,14 +10,12 @@ input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button,a{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
-a,a:visited{
-    text-decoration: none;-webkit-user-drag: none;
+a,a:visited{text-decoration: none;-webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
     -ms-user-drag: none;
-    user-drag: none;
-}
+    user-drag: none;}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;-webkit-user-drag: none;-khtml-user-drag: none;-moz-user-drag: none;-o-user-drag: none;-ms-user-drag: none;user-drag: none;}
