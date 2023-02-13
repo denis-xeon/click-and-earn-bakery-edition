@@ -87,7 +87,7 @@ if (autoClickLevel >= 0) {
 }
 
 
-mainBtnClick.onclick = function () { btnClick() }
+mainBtnClick.onclick = function () { btnClick() };
 bodyListen.onmouseover = function () { factoryChecker() };
 
 
