@@ -10,9 +10,9 @@ const factoryPageBtn = document.getElementById('factorypage-button');
 const homePage = document.getElementById('home-page');
 const factoryPage = document.getElementById('factory-page');
 const sellPage = document.getElementById('sell-page');
-const mainBtnClick = document.getElementById('click-button');
-const upgradeAutoBtnClick = document.getElementById('upgrade-auto-click');
-const upgradeImproveBtnClick = document.getElementById('upgrade-improve-click');
+const mainBtn = document.getElementById('click-button');
+const upgradeAutoBtn = document.getElementById('upgrade-auto-click');
+const upgradeImproveBtn = document.getElementById('upgrade-improve-click');
 const bodyListen = document.getElementById('body');
 
 const upgradeLevels = [0, 1, 2, 5, 10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 100000];
@@ -26,36 +26,24 @@ var improveClickLevel = 1;
 var autoClickLevel = 0;
 
 function btnClick() {
-    // if (moneyBalance < 99999) {
-    //     moneyBalance += upgradeLevels[improveClickLevel];
-    // } else {
-    //     window.location.reload()
-    // }
     moneyBalance += upgradeLevels[improveClickLevel];
     upgradeChecker();
     factoryChecker();
-    // if (moneyBalance >= 100) {
-    //     document.getElementById('cookie-factory-banner').style.display = "none"
-    // } else {
-    //     document.getElementById('cookie-factory-banner').style.display = "flex"
-    // }
     document.getElementById('total-amount').innerHTML = intToString(moneyBalance);
-    // document.getElementById('total-amount').innerHTML = moneyBalance;
-    // return true
 }
 
 function upgradeChecker() {
     if (moneyBalance >= upgradePrice[autoClickLevel] && autoClickLevel < (upgradeLevels.length - 1)) {
         document.getElementById('auto-click-button-banner').style.display = "none";
         document.getElementById('upgrade-auto-click').classList.add('upgrade-active');
-    }else{
+    } else {
         document.getElementById('auto-click-button-banner').style.display = "block";
         document.getElementById('upgrade-auto-click').classList.remove('upgrade-active');
     }
     if (moneyBalance >= upgradePrice[improveClickLevel] && improveClickLevel < (upgradeLevels.length - 1)) {
         document.getElementById('improve-click-button-banner').style.display = "none";
         document.getElementById('upgrade-improve-click').classList.add('upgrade-active');
-    }else{
+    } else {
         document.getElementById('improve-click-button-banner').style.display = "block";
         document.getElementById('upgrade-improve-click').classList.remove('upgrade-active');
     }
@@ -74,16 +62,17 @@ function autoClick() {
     upgradeChecker();
     factoryChecker();
     document.getElementById('total-amount').innerHTML = intToString(moneyBalance);
-    // document.getElementById('total-amount').innerHTML = moneyBalance;
 }
 
-factoryPageBtn.addEventListener('click', function () {
+
+function factoryPageBtnClick() {
     homePage.style.display = "none";
     factoryPage.style.display = "grid";
+}
 
-})
+factoryPageBtn.onclick = factoryPageBtnClick;
 
-homePageBtn.addEventListener('click', function () {
+function homePageBtnClick() {
     if (homePage.style.display != "flex") {
         factoryPage.style.display = "none";
         homePage.style.display = "flex";
@@ -91,53 +80,51 @@ homePageBtn.addEventListener('click', function () {
     } else {
         document.getElementById('home-suka').play();
     }
-})
+}
 
-mainBtnClick.addEventListener('click', function () {
+homePageBtn.onclick = homePageBtnClick;
+
+function mainBtnClick() {
     document.getElementById('click-audio').play();
-})
+}
 
-upgradeAutoBtnClick.addEventListener('click', function () {
+mainBtn.onclick = mainBtnClick;
+
+function upgradeAutoBtnClick() {
     if (moneyBalance >= upgradePrice[autoClickLevel] && autoClickLevel < (upgradeLevels.length - 1)) {
         moneyBalance -= upgradePrice[autoClickLevel];
         autoClickLevel++;
         document.getElementById('auto-click-price').innerHTML = intToString(upgradePrice[autoClickLevel]);
     }
-    // if (moneyBalance < upgradePrice[autoClickLevel] || autoClickLevel >= (upgradeLevels.length - 1)) {
-    //     document.getElementById('auto-click-button-banner').style.display = "block";
-    //     document.getElementById('upgrade-auto-click').classList.remove('upgrade-active');
-    // }
     upgradeChecker();
+    factoryChecker();
     if (autoClickLevel == (upgradeLevels.length - 1)) {
         document.getElementById('auto-click-dollar').innerHTML = "LVL MAX";
     }
-
     document.getElementById('persecond-amount').innerHTML = intToString(upgradeLevels[autoClickLevel]);
     document.getElementById('total-amount').innerHTML = intToString(moneyBalance);
-    // document.getElementById('total-amount').innerHTML = moneyBalance;
-})
+}
 
-upgradeImproveBtnClick.addEventListener('click', function () {
+upgradeAutoBtn.onclick = upgradeAutoBtnClick;
+
+function upgradeImproveBtnClick() {
     if (moneyBalance >= upgradePrice[improveClickLevel] && improveClickLevel < (upgradeLevels.length - 1)) {
         moneyBalance -= upgradePrice[improveClickLevel];
         improveClickLevel++;
         document.getElementById('improve-click-price').innerHTML = intToString(upgradePrice[improveClickLevel]);
     }
-    // if (moneyBalance < upgradePrice[improveClickLevel] || improveClickLevel >= (upgradeLevels.length - 1)) {
-    //     document.getElementById('improve-click-button-banner').style.display = "block";
-    //     document.getElementById('upgrade-improve-click').classList.remove('upgrade-active');
-    // }
     upgradeChecker();
+    factoryChecker();
     if (improveClickLevel == (upgradeLevels.length - 1)) {
         document.getElementById('improve-click-dollar').innerHTML = "LVL MAX";
     }
-
     document.getElementById('amout-by-click').innerHTML = intToString(upgradeLevels[improveClickLevel]);
     document.getElementById('total-amount').innerHTML = intToString(moneyBalance);
-    // document.getElementById('total-amount').innerHTML = moneyBalance;
-})
+}
 
-mainBtnClick.onclick = function () { btnClick() };
+upgradeImproveBtn.onclick = upgradeImproveBtnClick;
+
+mainBtn.onclick = function () { btnClick() };
 
 if (autoClickLevel >= 0) {
     setInterval(() => { autoClick(); }, 1000);
@@ -145,11 +132,6 @@ if (autoClickLevel >= 0) {
 
 console.log(upgradeLevels.length);
 
-    // if (moneyBalance >= 100) {
-    //     document.getElementById('cookie-factory-banner').style.display = "none";
-    // } else {
-    //     document.getElementById('cookie-factory-banner').style.display = "flex";
-    // }
 
 
 
