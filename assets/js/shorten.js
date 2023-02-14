@@ -9,7 +9,8 @@ export function intToString(num) {
       {v: 1E9, s: "B"},
       {v: 1E12, s: "T"},
       {v: 1E15, s: "P"},
-      {v: 1E18, s: "E"}
+      {v: 1E18, s: "E"},
+      {v: 1E21, s: "Q"}
       ];
     let index;
     for (index = si.length - 1; index > 0; index--) {
