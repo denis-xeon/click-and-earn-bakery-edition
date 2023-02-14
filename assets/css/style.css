@@ -227,6 +227,9 @@ border-radius: 11px;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* outline: none; */
     /* user-drag: none; */
 }
 .header__content-buttons div,.main-section__center-button, .main-section__center-button img,.main-section__center-button p,.main-section__center-button span{

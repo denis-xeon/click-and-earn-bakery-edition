@@ -16,16 +16,17 @@ const upgradePrice = [150, 300, 500, 1000, 2000, 5000, 10000];
 
 // (function () {
 
-    let moneyBalance = 0;
-    let improveClickLevel = 1;
-    let autoClickLevel = 0;
+    window.moneyBalance = 0;
+    var improveClickLevel = 1;
+    var autoClickLevel = 0;
 
     function btnClick() {
-        if (moneyBalance < 99999) {
-            moneyBalance += upgradeLevels[improveClickLevel];
-        } else {
-            window.location.reload()
-        }
+        // if (moneyBalance < 99999) {
+        //     moneyBalance += upgradeLevels[improveClickLevel];
+        // } else {
+        //     window.location.reload()
+        // }
+        moneyBalance += upgradeLevels[improveClickLevel];
         upgradeChecker();
         factoryChecker();
         // if (moneyBalance >= 100) {
@@ -42,10 +43,16 @@ const upgradePrice = [150, 300, 500, 1000, 2000, 5000, 10000];
         if (moneyBalance >= upgradePrice[autoClickLevel] && autoClickLevel < (upgradeLevels.length - 1)) {
             document.getElementById('auto-click-button-banner').style.display = "none";
             document.getElementById('upgrade-auto-click').classList.add('upgrade-active');
+        }else{
+            document.getElementById('auto-click-button-banner').style.display = "block";
+            document.getElementById('upgrade-auto-click').classList.remove('upgrade-active');
         }
         if (moneyBalance >= upgradePrice[improveClickLevel] && improveClickLevel < (upgradeLevels.length - 1)) {
             document.getElementById('improve-click-button-banner').style.display = "none";
             document.getElementById('upgrade-improve-click').classList.add('upgrade-active');
+        }else{
+            document.getElementById('improve-click-button-banner').style.display = "block";
+            document.getElementById('upgrade-improve-click').classList.remove('upgrade-active');
         }
     }
 
