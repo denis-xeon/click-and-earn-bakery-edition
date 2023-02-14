@@ -11,8 +11,8 @@ const upgradeAutoBtnClick = document.getElementById('upgrade-auto-click');
 const upgradeImproveBtnClick = document.getElementById('upgrade-improve-click');
 const bodyListen = document.getElementById('body');
 
-const upgradeLevels = [0, 1, 2, 5, 10, 20, 50, 100];
-const upgradePrice = [150, 300, 500, 1000, 2000, 5000, 10000];
+const upgradeLevels = [0, 1, 2, 5, 10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 100000];
+const upgradePrice = [150, 300, 500, 1000, 2000, 5000, 10000, 25000, 50000, 100000, 250000, 500000, 1000000];
 
 // (function () {
 
@@ -106,7 +106,7 @@ const upgradePrice = [150, 300, 500, 1000, 2000, 5000, 10000];
             document.getElementById('auto-click-dollar').innerHTML = "LVL MAX";
         }
 
-        document.getElementById('persecond-amount').innerHTML = upgradeLevels[autoClickLevel];
+        document.getElementById('persecond-amount').innerHTML = intToString(upgradeLevels[autoClickLevel]);
         document.getElementById('total-amount').innerHTML = intToString(moneyBalance);
         // document.getElementById('total-amount').innerHTML = moneyBalance;
     })
@@ -125,7 +125,7 @@ const upgradePrice = [150, 300, 500, 1000, 2000, 5000, 10000];
             document.getElementById('improve-click-dollar').innerHTML = "LVL MAX";
         }
 
-        document.getElementById('amout-by-click').innerHTML = upgradeLevels[improveClickLevel];
+        document.getElementById('amout-by-click').innerHTML = intToString(upgradeLevels[improveClickLevel]);
         document.getElementById('total-amount').innerHTML = intToString(moneyBalance);
         // document.getElementById('total-amount').innerHTML = moneyBalance;
     })
@@ -135,6 +135,8 @@ const upgradePrice = [150, 300, 500, 1000, 2000, 5000, 10000];
     if (autoClickLevel >= 0) {
         setInterval(() => { autoClick(); }, 1000);
     }
+
+    console.log(upgradeLevels.length);
 
     // if (moneyBalance >= 100) {
     //     document.getElementById('cookie-factory-banner').style.display = "none";
