@@ -30,8 +30,8 @@ body{
     margin: 0 auto;
 }
 .container{
-  margin-left: 7%;
-  margin-right: 7%;
+  margin-left: 6.5%;
+  margin-right: 6.5%;
    
 }
 
@@ -248,11 +248,14 @@ border-radius: 11px;
     
 }
 .screen-factory{
-    width: 70%;
+    margin-top: 20px;
+    width: 100%;
     display: grid;
     gap: 2rem 13rem;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     display: none;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .factory-item{
     display: flex;
@@ -306,8 +309,8 @@ padding: 3px 20px;
     align-items: center;
     background: rgba(169, 146, 146, 0.55);
 border-radius: 20px;
-width: 204px;
-height: 296px;
+width: 110%;
+height: 105%;
 }
 @media screen and (min-width: 1440px) {
     /* .container{
@@ -319,5 +322,298 @@ height: 296px;
 @media screen and (max-width: 1440px){
     .screen-factory{
         gap:2rem 7rem ;
+    }
+}
+@media screen and (max-width: 1184px) {
+    .header__content-button{
+        margin-left: 20px;
+    }
+    .header-total-amount{
+        margin-right: 20px;
+    }
+    .header__logo h1{
+        font-size: 30px;
+        line-height: 25px;
+    }
+    .header__content-button{
+        font-size: 16px;
+    }
+    .header__content-button{
+        width: 75px;
+        height: 70px;
+    }
+    .header__content-counter{
+        min-width: 150px;
+    }
+}
+@media screen and (max-width: 1025px){
+    /* .main-section__center-button{
+        height: 200px;
+    }
+    .center-button-wrapper{
+        width: 200px;
+    } */
+}
+
+@media screen and (max-width: 990px) {
+    .header-content,.header__content,.main-section__content{
+        flex-direction: column;
+    }
+    .header__logo,.header__content-counters{
+        margin-bottom: 15px;
+    }
+    .header__content-button{
+        height: 50px;
+    }    
+    .header-content{
+        position: relative;
+    }
+    .header__setting-button{
+        position: absolute;
+        left: 5%;
+        top: 20px;
+    }
+    .header__setting-button:active{
+        position: absolute;
+        top: 20px;
+    }
+    .header__setting-button img{
+        height: 20px;
+        width: 20px;
+    }
+    .header__setting-button{
+        padding: 5px;
+    }
+    .main-section__items-counters{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 360px;
+        align-items: center;
+        
+    }
+    .main-section__content{
+        align-items: center;
+    }
+    .screen-home{
+        flex-direction: column;
+        width: auto;
+    }
+    .center-button-wrapper{
+        position: relative;
+    }
+    .main-section__center-button{
+        margin-top: 30px;
+    }
+    .upgrades-items{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .main-section__upgrades{
+        position: fixed;
+        bottom: 30px;
+        left: 20%;
+        right: 20%;
+        margin-top: 20px;
+
+    }
+    .header__content-button:nth-child(1){
+        margin-left: 0;
+    }
+    .upgrades-item-text{
+        font-size: 14px;
+    }
+    .upgrades-item img{
+        height: 30px;
+        width: 30px;
+    }
+    .upgrades-item,.upgrades-item-banner{
+        height: 40px;
+        width: 160px;
+    }
+    .center-button-coin-img{
+        height: 180px;
+        width: 180px;
+    }
+    .main-section__center-button{
+        height: 280px;
+    }
+    .center-button-wrapper{
+        width: 280px;
+        /* height: 30vh; */
+    }
+    .item-name{
+        display: none;
+    }
+    .item-icon{
+        height: 40px;
+        width: 40px;
+        top: -2px;
+        left: -10px;
+    }
+    .item-count-content{
+        min-width: 130px;
+    }
+    .item-count{
+        margin-bottom: 15px;
+    }
+    .main-section__content{
+        margin-top: 20px;
+    }
+    .header__content-counters{
+        font-size: 16px;
+    }
+    .header__content-counter{
+        height: 30px;
+        min-width: 120px;
+    }
+    .header-total-amount-img{
+        height: 30px;
+        width: 30px;
+    }
+    .main-section__upgrades h3{
+        font-size: 18px;
+    }
+    .main-section__center-button{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .center-button-coin-img{
+        height: 80px;
+        width: 80px;
+    }
+    .main-section__center-button{
+        height: 180px;
+    }
+    .center-button-wrapper{
+        width: 180px;
+    }
+    .main-section__upgrades{
+        left: 3%;
+        right: 3%;
+        bottom: 0;
+    }
+    .factory-item{
+        max-width: 140px;
+        font-size: 12px;
+    }
+    .factory-item-banner{
+        width: 110%;
+        height: 105%;
+        font-size: 20px;
+    }
+    .screen-factory{
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem 4.82rem;
+    }
+    .factory-item h2{
+        display: none;
+    }
+    .factory-item-info{
+        margin-top: 10px;
+    }
+    /* .screen-factory>.main-section__items-counters{
+        display: none;
+    } */
+    .factory-item-improve-button{
+        height: 31px;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 767px) and (max-height: 990px) and (min-height: 760px){
+    .main-section__center-button{
+        height: 35vh;
+    }
+    .center-button-wrapper{
+        width: 80vw;
+    }
+    .center-button-coin-img{
+        height: 80%;
+        width: 80%;
+    }
+    .main-section__center-button{
+        font-size: 32px;
+    }
+    
+
+}
+@media screen and (max-width: 330px){
+    .item-count-content{
+        min-width: 90px;
+        padding: 5px;
+    }
+    .upgrades-item img{
+        height: 20px;
+        width: 20px;
+    }
+    .upgrades-item-text{
+        font-size: 10px;
+    }
+    .upgrades-item, .upgrades-item-banner{
+        width: 120px;
+        height: 30px;
+        margin-bottom: 40px;
+    }
+    .header__setting-button{
+        left: 3%;
+    }
+    .header-total-amount{
+        margin-right: 10px;
+    }
+    .item-icon{
+        height: 30px;
+    }
+}
+@media (max-height: 788px) and (max-width: 380px){
+    .header__logo h1{
+        font-size: 26px;
+        line-height: 20px;
+    }
+    .header__content-button{
+        font-size: 14px;
+    }
+    .header__content-button{
+        height: 30px;
+    }
+    .item-count{
+        margin-bottom: 8px;
+    }
+    .upgrades-item, .upgrades-item-banner{
+        margin-bottom: 20px;
+    }
+    .main-section__center-button{
+        height: 120px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .center-button-wrapper{
+        width: 120px;
+    }
+    .center-button-coin-img{
+        height: 50px;
+        width: 50px;
+    }
+    .screen-factory{
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 1rem 0.82rem;
+    }
+    .factory-item-banner{
+        width: 110%;
+        height: 105%;
+    }
+    .factory-item-improve-button {
+        height: 29px;
+        padding: 10px 8px;
+    }
+}
+@media (width: 768px) and (height: 1024px){
+    .screen-factory{
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        width: 100%;
     }
 }
