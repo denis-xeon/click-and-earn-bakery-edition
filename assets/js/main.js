@@ -135,13 +135,13 @@ mainBtnClick.oncontextmenu = function () { btnClick() };
 
 
 if (autoClickLevel >= 0) {
-    setInterval(() => { autoClick(); }, 1000);
+    setInterval(() => { autoClick(); }, 1000)
 }
 
-console.log(upgradeLevels.length);
+console.log(upgradeLevels.length); 
 
 
-
+ 
 
 
 
