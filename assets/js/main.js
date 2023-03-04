@@ -71,7 +71,7 @@ function factoryPageBtnClick() {
     if(window.screen.width <= 767){
         document.getElementById('items-counters').style.display = "none";
     }
-})
+}
 
 function homePageBtnClick() {
     if (homePage.style.display != "flex") {
@@ -86,7 +86,7 @@ function homePageBtnClick() {
     }
 }
 
-homePageBtn.onclick = homePageBtnClick;
+
 
 function mainBtnClick() {
     document.getElementById('click-audio').play();
@@ -128,6 +128,8 @@ function upgradeImproveBtnClick() {
 
 upgradeImproveBtn.onclick = upgradeImproveBtnClick;
 
+homePageBtn.onclick = homePageBtnClick;
+factoryPageBtn.onclick = factoryPageBtnClick;
 mainBtnClick.onclick = function () { btnClick() };
 mainBtnClick.oncontextmenu = function () { btnClick() };
 
