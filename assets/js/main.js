@@ -147,10 +147,10 @@ mainBtnClick.oncontextmenu = function () { btnClick() };
 
 
 if (autoClickLevel >= 0) {
-    setInterval(() => { autoClick(); }, 1000);
+    setInterval(() => { autoClick(); }, 1000)
 }
 
-console.log(upgradeLevels.length);
+console.log(upgradeLevels.length); 
 
     // if (moneyBalance >= 100) {
     //     document.getElementById('cookie-factory-banner').style.display = "none";
@@ -158,7 +158,7 @@ console.log(upgradeLevels.length);
     //     document.getElementById('cookie-factory-banner').style.display = "flex";
     // }
 
-
+ 
 
 
 
