@@ -68,14 +68,18 @@ function autoClick() {
 function factoryPageBtnClick() {
     homePage.style.display = "none";
     factoryPage.style.display = "grid";
-}
-
-factoryPageBtn.onclick = factoryPageBtnClick;
+    if(window.screen.width <= 767){
+        document.getElementById('items-counters').style.display = "none";
+    }
+})
 
 function homePageBtnClick() {
     if (homePage.style.display != "flex") {
         factoryPage.style.display = "none";
         homePage.style.display = "flex";
+        if(window.screen.width <= 767){
+        document.getElementById('items-counters').style.display = "flex";
+    }
         // sellPage.style.display = "none"
     } else {
         document.getElementById('home-suka').play();
@@ -124,7 +128,9 @@ function upgradeImproveBtnClick() {
 
 upgradeImproveBtn.onclick = upgradeImproveBtnClick;
 
-mainBtn.onclick = function () { btnClick() };
+mainBtnClick.onclick = function () { btnClick() };
+mainBtnClick.oncontextmenu = function () { btnClick() };
+
 
 if (autoClickLevel >= 0) {
     setInterval(() => { autoClick(); }, 1000);
